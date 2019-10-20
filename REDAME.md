@@ -28,11 +28,13 @@ Update and upgrade installed packages
 * sudo apt-get update
 * sudo apt-get upgrade
 
-Change the SSH port from 22 to 2200
+Change the SSH port from 22 to 2200 and PermitRootLogin from prohibit-password to no
 * Edit the /etc/ssh/sshd_config file: sudo nano /etc/ssh/sshd_config.
 * Change the port number from 22 to 2200.
+* Change PermitRootLogin from prohibit-password to no
 * Save and exit using CTRL+X and confirm with Y.
 * Restart SSH: sudo service ssh restart.
+
 
 Configure the Uncomplicated Firewall (UFW)
 Configure the default firewall for Ubuntu to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
